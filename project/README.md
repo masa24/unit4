@@ -44,10 +44,3 @@
 ## Demonstration Video
 
 
-# Appendix
-![aproval from client](aproval.png)
-
-
-
-
-
