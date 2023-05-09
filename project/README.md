@@ -49,7 +49,9 @@ To tackle the problem defined above, we propose to create a social media-style w
 ## Record of Tasks
 | Task No  | Planned Action  | Planned Outcome | Time estimate  | Target completion date  | Criterion |
 |:----------|:-------------------------|:----------|:----------|:----------|:----------|
-| 1  | Design: Create a prototype wireframe and ER diagram |  Get a specific idea of what the website will be looking like   | 30 mins  | 2023.03.31    | C |
+| 8  | Planning: Writing the problem definition | Record the problem definition in the repository | 30 mins  | 2023.04.08    | A   |
+| 9  | Planning: Write down the success criteria | record the success criteria and how it is refering the problem definition  | 30 mins  | 2023.04.09    | A  |
+| 1  | Design: Create a prototype wireframe and ER diagram |  Get a specific idea of what the website will be looking like   | 30 mins  | 2023.03.31    | B |
 | 2  | Development: Coding the login and register page |  Get a specific design for the login page   | 30 mins  | 2023.03.31    | C |
 | 3  | Development: Create database in SQL |  Create all database needed in the website   | 30 mins  | 2023.03.31    | C |
 | 4  | Development: Create the function for login and register |  Get a functional register and login page connected with the database   | 30 mins  | 2023.03.31    | C |
@@ -60,6 +62,13 @@ To tackle the problem defined above, we propose to create a social media-style w
 | 9  | Development: Create the function for Share Screen |  Get a specific design for the Share page where you can create posts   | 30 mins  | 2023.03.31    | C |
 | 10 | Development: Coding the Share Screen |  Get a specific design for the Share page   | 30 mins  | 2023.03.31    | C 
 | 11 | Development: Create the function for Share Screen |  Get a specific design for the Share page where you can create posts   | 30 mins  | 2023.03.31    | C |
+| 12 | Development: Coding the Add Screen |  Get a specific design for the Add page   | 30 mins  | 2023.03.31    | C 
+| 13 | Development: Create the function for Add Screen |  Get a specific design for the Add page where you can add games to your owned list.   | 30 mins  | 2023.03.31    | C |
+| 14 | Development: Coding the Profile Screen |  Get a specific design for the Profile page   | 30 mins  | 2023.03.31    | C 
+| 15 | Development: Create the function for Profile Screen |  Get a specific design for the Add page where you can see what game you own and posts you created.   | 30 mins  | 2023.03.31    | C |
+| 15 | Development: Create the searching function |  Create a search bar and make it functionable.  | 30 mins  | 2023.03.31    | C |
+
+
 
 
 
@@ -71,12 +80,26 @@ To tackle the problem defined above, we propose to create a social media-style w
 # Criteria C: Development
 
 ## Existing Tools
-
+| Software/Development Tools | Coding Structure Tools          | Libraries      |
+|----------------------------|---------------------------------|----------------|
+| PyCharm                    |Encryption                       | Flask           |
+| Relational databases       | Objects, attributes and methods | sqlite3        |
+| SQLite                     | If statements                   | passlib        |
+| Python                     |                                 |                |
+| Chat GPT                   |                                 |                | 
 ## List of techniques used
 
-## Computational Thinking
+1. Flask library/routes
+2. For loops
+3. If statements
+4. Password hashing
+5. Interacting with databases
+6. Lists
+7. Cookies
 
-## code
+## Success criteria
+
+## other
 
 
 # Criteria D: Functionality
