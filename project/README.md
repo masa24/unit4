@@ -1,4 +1,4 @@
-# Unit 4 Project: Book App
+# Unit 4 Project: Game review app
 
 
 ## Criteria A: Planning
@@ -7,19 +7,13 @@
 I am a student and a huge game enthusiast. I find it very challenging to determine whether the quality of a game is worth purchasing or not.
 
 When I want to purchase a new game, I often struggle to find reliable and informative reviews, since fans mostly make the sources and those could be biased.
-
 Sometimes it is very hard just to look for information on a specific game because it comes with many other unneeded information.
 
 Also, the information for different games are made by different individuals on various platforms.
 Therefore it makes it very hard to compare reviews of different games with each other.
-
 We also don’t have a specific platform to share our opinion about games.
 
 These problems come up because there is no service that brings a great number and variety of gamers into one and shares their opinion.
-
-
-
-
 The lack of information and comparison will make it difficult to determine the value and quality of the game.
 Knowing your own gaming experience also helps you to make good purchase decisions. Currently there are no good platforms for you to look back at what games you have and what kind of opinions you had on them.
 
@@ -27,6 +21,8 @@ These issues can result in a poor gaming experience, such as missing opportuniti
 
 
 ## Proposed Solution
+To tackle the problem defined above, we propose to create a social media-style website that brings together a community of gamers to share their, reviews, and experiences with different games. The website will be built using Python as it is secure, open-source, and extensive, making it a better alternative to Javascript, which poses security risks. Flask will be used to host the website as it is highly scalable and provides great control over the code. To store the data, we will use SQLite as it excels at small to medium HTTP requests and can run independently after installation. The website's user interface will be created using Bootstrap5, which is compatible with modern browsers and provides cross-browser compatibility. This website will give gamers access to a reliable and comprehensive source of information. These can help us make informed decisions and enhance their overall gaming experience.
+
 
 ## Success Criteria
 | No. | Success critieria	         | Issue tackled       |
