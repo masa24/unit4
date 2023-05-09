@@ -47,6 +47,21 @@ To tackle the problem defined above, we propose to create a social media-style w
 ## Wireframe
 
 ## Record of Tasks
+| Task No  | Planned Action  | Planned Outcome | Time estimate  | Target completion date  | Criterion |
+|:----------|:-------------------------|:----------|:----------|:----------|:----------|
+| 1  | Design: Create a prototype wireframe and ER diagram |  Get a specific idea of what the website will be looking like   | 30 mins  | 2023.03.31    | C |
+| 2  | Development: Coding the login and register page |  Get a specific design for the login page   | 30 mins  | 2023.03.31    | C |
+| 3  | Development: Create database in SQL |  Create all database needed in the website   | 30 mins  | 2023.03.31    | C |
+| 4  | Development: Create the function for login and register |  Get a functional register and login page connected with the database   | 30 mins  | 2023.03.31    | C |
+| 5  | Development: Coding the Home Screen |  Get a specific design for the Home screen   | 30 mins  | 2023.03.31    | C |
+| 6  | Development: Create the side bar which is common through the website |  Get a specific design and function for the side bar   | 30 mins  | 2023.03.31    | C |
+| 7  | Development: Create the function for Home Screen |  Get a functional Home Screen where you can See others post   | 30 mins  | 2023.03.31    | C |
+| 8  | Development: Coding the Share Screen |  Get a specific design for the Share page   | 30 mins  | 2023.03.31    | C 
+| 9  | Development: Create the function for Share Screen |  Get a specific design for the Share page where you can create posts   | 30 mins  | 2023.03.31    | C |
+| 10 | Development: Coding the Share Screen |  Get a specific design for the Share page   | 30 mins  | 2023.03.31    | C 
+| 11 | Development: Create the function for Share Screen |  Get a specific design for the Share page where you can create posts   | 30 mins  | 2023.03.31    | C |
+
+
 
 ## Flow Diagrams
 
