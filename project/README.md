@@ -41,7 +41,7 @@ To tackle the problem defined above, we propose to create a social media-style w
 ## System Diagram
 ![system](unit4_system.png)
 ## Data Storage
-![er](unit4_er.png)
+![er](er.png)
 ## UML Diagram
 ![uml](unit4_uml.png)
 ## Wireframe
@@ -73,7 +73,14 @@ To tackle the problem defined above, we propose to create a social media-style w
 
 
 ## Flow Diagrams
+### login function
+![login](login.png)
 
+### register function
+![login](register.png)
+
+### search function
+![login](search.png)
 ## Test Plan
 
 
