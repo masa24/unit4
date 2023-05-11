@@ -39,11 +39,11 @@ To tackle the problem defined above, we propose to create a social media-style w
 # Criteria B: Design
 
 ## System Diagram
-
+![system](unit4_system.png)
 ## Data Storage
-
+![er](unit4_er.png)
 ## UML Diagram
-
+![uml](unit4_uml.png)
 ## Wireframe
 
 ## Record of Tasks
