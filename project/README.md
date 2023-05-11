@@ -43,7 +43,7 @@ To tackle the problem defined above, we propose to create a social media-style w
 ## Data Storage
 ![er](er.png)
 ## UML Diagram
-![uml](unit4_uml.png)
+![uml](uml.png)
 ## Wireframe
 
 ## Record of Tasks
