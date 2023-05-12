@@ -32,7 +32,7 @@ To tackle the problem defined above, we propose to create a social media-style w
 | 3 | The user can view other social media post  | "I often struggle to find reliable and informative reviews", "Therefore it makes it very hard to compare reviews of different games with each other."  | 
 | 4 | Users are able to store the games they own.  | "there are no good platforms for you to look back at what games you have" | 
 | 5 | Users can search game reviews by title, post creator and publisher.  | "Sometimes it is very hard just to look for information on a specific game because it comes with many other unneeded information."  | 
-| 6 | User can have their own profile page that displays their own posts and . | "Currently there are no good platforms for you to look back at what games you have and what kind of opinions you had on them." | 
+| 6 | User can have their own profile page that displays their own posts and the game you own. | "Currently there are no good platforms for you to look back at what games you have and what kind of opinions you had on them." | 
 
 
 
@@ -82,6 +82,19 @@ To tackle the problem defined above, we propose to create a social media-style w
 ### search function
 ![login](search.png)
 ## Test Plan
+| Instruction                        | Category     | Input example / code                               | Description                                                                                                        | Expected output                                                         | Success criteria |
+|------------------------------------|--------------|----------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|------------------|
+|Test the login   | Unit testing  | Email: banana password: banana  | The user is able to login to the application and the home screen is displayed when they enter | The user logs in if the username and password is correct and the home screen is displayed with a cookie being created as well(The password is for testing)   |2, 3 | 
+|Test the login with wrong password | Unit testing  | username: banana Password: melon (wrong password) | The user inputs the wrong password when trying to login | Error message shows the password is wrong | 2  | 
+|Test the login with wrong username | Unit testing  | username: melon(does not exist) Password: banana | The user inputs the wrong username | Error message shows the user does not exist | 2  | 
+|Test the registration | Unit testing | username: banana password: Melon123 check password: Melon123  | The user inputs their email and passwords and try to sign up | The user is able to sign up and their email and password (which is hashed) is saved in the database 
+|Test the registration with wrong inputs | Unit testing | username: bananapass password: abc check password: abc | The user doesnt input the password that reaches the requirement. | An error message is displayed on the user interface 	| 2  | 
+|Test the registration with unmatching confirmation | Unit testing | username: bananaconfirm password: Melon123 check password: Banana123 | The user doesnt input matching confirm passport. | An error message is displayed on the user interface 	| 2  | 
+|Test the profile page | Unit testing | n/a  | The user clicks the profile button in the sidebar 	| The user is able to see the games they own and the posts that they have posted in the past 	| 6  | 
+|Test the login, registeration, home screen, new posts and profile page  | Integration testing   | uswername: banana Password: Melon123  Check password: Melon123  title: MHXX publisher: Capcom content: Very good | The user is able to signup and then login, letting them go to the home screen where they are able to view everyone's posts and then they are able upload new posts | They are able to signup and login and create a new post that is displayed in the home screen and profile page  | 1, 2, 3, 6 |
+|Test the adding function	|Unit testing 	| n/a	| This enables the user to add the games they own to their own list. | The information will be added in the database and user can check them in their profile page.	| 4  | 
+| Test the search function  | Unit testing  | Word searched in search bar MHXX   | The user inputs a search word in the search bar which searches the database   | The posts with including the search term is outputted in the home page |  5 |  
+
 
 
 # Criteria C: Development
@@ -89,7 +102,7 @@ To tackle the problem defined above, we propose to create a social media-style w
 ## Existing Tools
 | Software/Development Tools | Coding Structure Tools          | Libraries      |
 |----------------------------|---------------------------------|----------------|
-| PyCharm                    |Encryption                       | Flask           |
+| PyCharm                    | Encryption                      | Flask          |
 | Relational databases       | Objects, attributes and methods | sqlite3        |
 | SQLite                     | If statements                   | passlib        |
 | Python                     |                                 |                |
@@ -105,8 +118,235 @@ To tackle the problem defined above, we propose to create a social media-style w
 7. Cookies
 
 ## Success criteria
+### 1 The user can upload their own review towards the game as a social media post. The post includes the title, publisher and content.
 
-## other
+The client requested a function to post game reviews. As a solution I created this function which allows the user to create a public post.  This function works by collecting the post information(title,publisher,content) from the html file and adding them to the posts database.
+
+This code bellow is a function to add the post information to the database. First, it gets the post information from the html file. Then it will run the query to add the information to the database. This operation could be done in the share screen
+```.py
+def share():
+    print(f'share,: method: {request.method}')
+    if request.method == "POST":
+        title = request.form['title']
+        publisher = request.form['publisher']
+        content = request.form['content']
+        now = datetime.datetime.now()
+        username = request.cookies.get('username')
+        db = database_handler('game.db')
+        query = f'INSERT INTO posts(title,publisher,username,content,date) values ("{title}","{publisher}","{username}","{content}","{now}")'
+        db.run_query(query)
+        print('post success')
+        db.close()
+        response = make_response(redirect('/home'))
+        return response
+    return render_template('share.html')
+```
+This code bellow is for creating the database.It runs every time the app is runned and it creates the database when it doesnt exist.
+```,py
+query_post = """CREATE table if not exists posts (
+        id INTEGER PRIMARY KEY,
+        title TEXT,
+        publisher TEXT,
+        username TEXT,
+        content TEXT,
+        date TEXT
+    )
+    """
+db.run_save(query_post)
+```
+### 2 There is a login and registration page for each user.
+The client requested a login and register function. As a solution for this I created a register and login function which the informations are hashed and protected. The login funtion works by matching the userinput(username, password) with the information in the database. The register function works by adding the userinput(username, password) into the database after the innput validation.
+
+The code bellow is the login function. First it receives user input(username, password) from the html file. After that the query will search for the matching username in the database. If the user didn't exist it will show a error message that says "User doesnt exist". When the user existed, it will check if the password matches the one in the database. If it didn't match it will show a message that saya "Wrong password". When the password match, the user will be redirected to the home page.
+```.py
+def login():
+    msg = ""
+    if request.method == "POST":
+        username = request.form['username']
+        passwd = request.form['password']
+        passwd = hash(passwd)
+        db = database_handler("game.db")
+        user = db.search(f"Select * from users where username = '{username}'")  # Check the user in the database
+        print(user)
+        print(username)
+        print(passwd)
+
+        if len(user)>0:
+            print(user[0][1])
+            if passwd == user[0][2]:
+                db.close()
+
+                response = make_response(redirect('/home'))
+                response.set_cookie('username', username)
+                return response
+            else:
+                msg = 'Wrong password'
+                print(msg)
+        else:
+            msg = "User doesn't exist"
+            print(msg)
+    return render_template("login.html", message=msg)
+```
+The code bellow is the register function. First it receives user input(username, password, password confirmation) from the html file. After that the query will search for the overlapping username in the database. If the user already exists it will show a error message that says "username already used". When the username didn't overlap, it will check if the password matches the requirement. The password validation function is pulled from the my_lib.py file:
+```.py
+
+def password_require(password):
+    print('start')
+    password = str(password)
+    number = False
+    upper = False
+    length = False
+    for i in password:
+        if i.isdigit():
+            number = True
+        if i.isupper():
+            upper = True
+    if len(password) > 7:
+        length = True
+    print(number,upper,length)
+    if number == False or upper == False or length == False:
+        return 'invalid'
+```
+This check if the password includes atleast an uppercase character, integer and is more than 7 characaters. If the password didn't match the requirement it will show error message:"password should be more than 7 characters including uppercase and number". When the password met the requirement, it will check if the password is confirmed. If the password did not match the confirmation it will show an error message: "password confirmation not matching". Once all the requirements are met and confirmed the information(username, password) will be added in the database. After this the user will be redirected to the home page.
+```.py
+def register():
+    print(request.method)
+    if request.method == 'POST':
+        db = database_handler("game.db")
+        username = request.form['username']
+        password = request.form['password']
+        con_pass = request.form['con_password']
+
+        print(username, password,con_pass)
+        query = f"SELECT username from users where username = '{username}'"
+        user = db.search(query)
+        msg = ''
+        if len(user) > 0:
+            msg = 'username already used'
+            print(msg)
+        elif password_require(password) == 'invalid':
+            msg = 'password should be more than 7 characters including uppercase and number'
+            print(msg)
+
+        elif password != con_pass:
+            msg = 'password confirmation not matching'
+            print(msg)
+        else:
+            query = f'INSERT INTO users(username,password) values ("{username}","{hash(password)}")'
+            db.run_query(query)
+            db.close()
+            response = make_response(redirect('/home'))
+            print('success')
+            response.set_cookie('username',username)
+            return response
+    return render_template('register.html')
+```
+For both functions, once the user is directed to the home page, a cookie of the username will be set.
+
+### 3 The user can view other social media post.
+The client requested to see other peoples post. As a solution I made the home screen to show all post. In this function the function will get information of all posts from the database. The information will be sent to the html and will be displayed.
+
+python code
+```.py
+def home():
+    current_user = request.cookies.get('username')
+    print(f'current user: {current_user}')
+    db = database_handler("game.db")
+    query = f"SELECT * from posts"
+    posts = db.search(query)
+    print(posts)
+    return render_template('home.html',posts = posts)
+```
+In the python code the query gets all information for every post. The information will sent to the html file.
+
+html code
+```.py
+{% for item in posts %}
+    <style>
+        .post {
+            width: 200px;
+            height: 200px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+
+    <div class="post">
+        <p class="title">{{ item[1] }}</p>
+        <p class="publisher">{{ item[2] }}</p>
+        <p class="creator">{{ item[3] }}</p>
+        <p class="content">{{ item[4] }}</p>
+        <p class="date">{{ item[5] }}</p>
+        </div>
+    </div>
+
+{% endfor %}
+```
+In the html code they will first create a post based on the information recieved. Then it will loop all the process for every post using a for loop.
+
+### 4 Users are able to store the games they own.
+The client requested to have a function to create a list for each user to add games that they own. As a solution I added a function that could store owned games in a database. The function will recieve user input from the html file. The information will be added to the owned table. After the addition the user will be redirected to the home page.
+```.py
+def add()
+    if request.method == 'POST':
+        print('step1')
+        db = database_handler("game.db")
+        user = request.cookies.get('username')
+        user_id = db.search(f"Select id from users where username = '{user}'")
+        user_id = user_id[0][0]
+        print('step2')
+        print(f'add: {user}{user_id}')
+        title = request.form['title']
+        publisher = request.form['publisher']
+        platform = request.form['platform']
+        print('step3')
+        now = datetime.datetime.now()
+
+        query = f'INSERT INTO owned(title,publisher,platform,user_id,date) values ("{title}","{publisher}","{platform}","{user_id}","{now}")'
+        print('run successss')
+        db.run_query(query)
+        db.close()
+        response = make_response(redirect('/home'))
+        return response
+    return render_template('add.html')
+```
+### 5 Users can search game reviews by title, post creator and publisher.
+The user requested a function that could search posts. As a solution, I created a function that could search post from its title, publisher or username. The function works by colecting user input from the html file and than search the term from the database.
+The term will be searched through the database for 3 times which is from the title, publisher and username.
+```.py
+    if request.method == 'POST':
+        posts = []
+        search = request.form['search']
+        print(search)
+        for i in ['title','publisher','username']:
+            query = f"SELECT * from posts where {i} LIKE '%{search}%'"
+            post = db.search(query)
+            print(post)
+            posts += post
+
+        db.close()
+        return render_template('home.html', posts=posts)
+```
+
+### 6 User can have their own profile page that displays their own posts and the games they own.
+The user wanted to be able to see their own posts and the games they own in the home screen. As a solution I created the home screen to be able to display the users game and past posts.
+```.py
+def profile():
+
+    db = database_handler("game.db")
+    user = request.cookies.get('username')
+    user_id = db.search(f"Select id from users where username = '{user}'")
+    user_id = user_id[0][0]
+    print(user_id)
+    owned = db.search(f"Select * from owned where user_id = '{user_id}'")
+    post_self = db.search(f"Select * from posts where username = '{user}'")
+    print(owned)
+    print(post_self)
+
+    db.close()
+    return render_template('profile.html',owned = owned, post_self = post_self)
+```
 
 
 # Criteria D: Functionality
