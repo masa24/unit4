@@ -32,7 +32,7 @@ To tackle the problem defined above, we propose to create a social media-style w
 | 3 | The user can view other social media post  | "I often struggle to find reliable and informative reviews", "Therefore it makes it very hard to compare reviews of different games with each other."  | 
 | 4 | Users are able to store the games they own.  | "there are no good platforms for you to look back at what games you have" | 
 | 5 | Users can search game reviews by title, post creator and publisher.  | "Sometimes it is very hard just to look for information on a specific game because it comes with many other unneeded information."  | 
-| 6 | User can have their own profile page that displays their own posts and the game you own. | "Currently there are no good platforms for you to look back at what games you have and what kind of opinions you had on them." | 
+| 6 | User can have their own profile page that displays their own posts and the game they own. | "Currently there are no good platforms for you to look back at what games you have and what kind of opinions you had on them." | 
 
 
 
@@ -49,24 +49,32 @@ To tackle the problem defined above, we propose to create a social media-style w
 ## Record of Tasks
 | Task No  | Planned Action  | Planned Outcome | Time estimate  | Target completion date  | Criterion |
 |:----------|:-------------------------|:----------|:----------|:----------|:----------|
-| 8  | Planning: Writing the problem definition | Record the problem definition in the repository | 30 mins  | 2023.04.08    | A   |
-| 9  | Planning: Write down the success criteria | record the success criteria and how it is refering the problem definition  | 30 mins  | 2023.04.09    | A  |
-| 1  | Design: Create a prototype wireframe and ER diagram |  Get a specific idea of what the website will be looking like   | 30 mins  | 2023.03.31    | B |
-| 2  | Development: Coding the login and register page |  Get a specific design for the login page   | 30 mins  | 2023.03.31    | C |
-| 3  | Development: Create database in SQL |  Create all database needed in the website   | 30 mins  | 2023.03.31    | C |
-| 4  | Development: Create the function for login and register |  Get a functional register and login page connected with the database   | 30 mins  | 2023.03.31    | C |
-| 5  | Development: Coding the Home Screen |  Get a specific design for the Home screen   | 30 mins  | 2023.03.31    | C |
-| 6  | Development: Create the side bar which is common through the website |  Get a specific design and function for the side bar   | 30 mins  | 2023.03.31    | C |
-| 7  | Development: Create the function for Home Screen |  Get a functional Home Screen where you can See others post   | 30 mins  | 2023.03.31    | C |
-| 8  | Development: Coding the Share Screen |  Get a specific design for the Share page   | 30 mins  | 2023.03.31    | C 
-| 9  | Development: Create the function for Share Screen |  Get a specific design for the Share page where you can create posts   | 30 mins  | 2023.03.31    | C |
-| 10 | Development: Coding the Share Screen |  Get a specific design for the Share page   | 30 mins  | 2023.03.31    | C 
-| 11 | Development: Create the function for Share Screen |  Get a specific design for the Share page where you can create posts   | 30 mins  | 2023.03.31    | C |
-| 12 | Development: Coding the Add Screen |  Get a specific design for the Add page   | 30 mins  | 2023.03.31    | C 
-| 13 | Development: Create the function for Add Screen |  Get a specific design for the Add page where you can add games to your owned list.   | 30 mins  | 2023.03.31    | C |
-| 14 | Development: Coding the Profile Screen |  Get a specific design for the Profile page   | 30 mins  | 2023.03.31    | C 
-| 15 | Development: Create the function for Profile Screen |  Get a specific design for the Add page where you can see what game you own and posts you created.   | 30 mins  | 2023.03.31    | C |
-| 15 | Development: Create the searching function |  Create a search bar and make it functionable.  | 30 mins  | 2023.03.31    | C |
+| 1  | Planning: Writing the problem definition | Record the problem definition in the repository | 30 mins  | 2023.05.10    | A   |
+| 2  | Planning: Write down the success criteria | record the success criteria and how it is refering the problem definition  | 30 mins  | 2023.05.10    | A  |
+| 3  | Design: Create a prototype wireframe and ER diagram |  Get a specific idea of what the website will be looking like   | 30 mins  | 2023.05.10    | B |
+| 4  | Development: Coding the login and register page |  Get a specific design for the login page   | 30 mins  | 2023.05.10    | C |
+| 5  | Development: Create database in SQL |  Create all database needed in the website   | 30 mins  | 2023.05.10    | C |
+| 6  | Development: Create the function for login and register |  Get a functional register and login page connected with the database   | 30 mins  | 2023.05.10    | C |
+| 7  | Development: Coding the Home Screen |  Get a specific design for the Home screen   | 30 mins  | 2023.05.10    | C |
+| 8  | Development: Create the side bar which is common through the website |  Get a specific design and function for the side bar   | 30 mins  | 2023.05.10    | C |
+| 9  | Development: Create the function for Home Screen |  Get a functional Home Screen where you can See others post   | 30 mins  | 2023.05.10    | C |
+| 10  | Development: Coding the Share Screen |  Get a specific design for the Share page   | 30 mins  | 2023.05.10    | C 
+| 11 | Development: Create the function for Share Screen |  Get a specific design for the Share page where you can create posts   | 30 mins  | 2023.05.10    | C |
+| 12 | Development: Coding the Share Screen |  Get a specific design for the Share page   | 45 mins  | 2023.05.10    | C 
+| 13 | Development: Create the function for Share Screen |  Get a specific design for the Share page where you can create posts   | 30 mins  | 2023.05.10    | C |
+| 14 | Development: Coding the Add Screen |  Get a specific design for the Add page   | 45 mins  | 2023.05.11    | C 
+| 15 | Development: Create the function for Add Screen |  Get a specific design for the Add page where you can add games to your owned list.   | 30 mins  | 2023.05.11    | C |
+| 16 | Development: Coding the Profile Screen |  Get a specific design for the Profile page   | 30 mins  | 2023.05.11    | C 
+| 17 | Development: Create the function for Profile Screen |  Get a specific design for the Add page where you can see what game you own and posts you created.   | 30 mins  | 2023.05.11    | C |
+| 18 | Development: Create the searching function |  Create a search bar and make it functionable.  | 30 mins  | 2023.05.11    | C |
+| 19 | Development: Finish all theCSS |  Finish the design of the UI  | 30 mins  | 2023.05.11    | C |
+| 20 | Design: Complete the UML diagram |  Show relation of classes  | 30 mins  | 2023.05.11    | B |
+| 21 | Design: Complete the flow diagram |  Create three flow charts  | 60 mins  | 2023.05.11    | B |
+| 22 | Design: Complete the ER diagram |  Show relation between databases  | 30 mins  | 2023.05.12    | B |
+| 23 | Design: Complete the wireframe |  Show relations between each screens and how it works  | 30 mins  | 2023.05.12    | B |
+| 24 | Evaluate: Get feedback from client |  Gather feedback from a none client person which is a new perspective  | 10 mins  | 2023.05.12   | B |
+| 25 | Evaluate: Get feedback from other users(besides client) |  Gather feedback from a none client person which is a new perspective  | 15 mins  | 2023.05.12    | B |
+
 
 
 
@@ -90,10 +98,10 @@ To tackle the problem defined above, we propose to create a social media-style w
 |Test the registration | Unit testing | username: banana password: Melon123 check password: Melon123  | The user inputs their email and passwords and try to sign up | The user is able to sign up and their email and password (which is hashed) is saved in the database 
 |Test the registration with wrong inputs | Unit testing | username: bananapass password: abc check password: abc | The user doesnt input the password that reaches the requirement. | An error message is displayed on the user interface 	| 2  | 
 |Test the registration with unmatching confirmation | Unit testing | username: bananaconfirm password: Melon123 check password: Banana123 | The user doesnt input matching confirm passport. | An error message is displayed on the user interface 	| 2  | 
-|Test the profile page | Unit testing | n/a  | The user clicks the profile button in the sidebar 	| The user is able to see the games they own and the posts that they have posted in the past 	| 6  | 
 |Test the login, registeration, home screen, new posts and profile page  | Integration testing   | uswername: banana Password: Melon123  Check password: Melon123  title: MHXX publisher: Capcom content: Very good | The user is able to signup and then login, letting them go to the home screen where they are able to view everyone's posts and then they are able upload new posts | They are able to signup and login and create a new post that is displayed in the home screen and profile page  | 1, 2, 3, 6 |
 |Test the adding function	|Unit testing 	| n/a	| This enables the user to add the games they own to their own list. | The information will be added in the database and user can check them in their profile page.	| 4  | 
 | Test the search function  | Unit testing  | Word searched in search bar MHXX   | The user inputs a search word in the search bar which searches the database   | The posts with including the search term is outputted in the home page |  5 |  
+|Test the profile page | Unit testing | n/a  | The user clicks the profile button in the sidebar 	| The user is able to see the games they own and the posts that they have posted in the past 	| 6  | 
 
 
 
@@ -208,6 +216,8 @@ def password_require(password):
         return 'invalid'
 ```
 This check if the password includes atleast an uppercase character, integer and is more than 7 characaters. If the password didn't match the requirement it will show error message:"password should be more than 7 characters including uppercase and number". When the password met the requirement, it will check if the password is confirmed. If the password did not match the confirmation it will show an error message: "password confirmation not matching". Once all the requirements are met and confirmed the information(username, password) will be added in the database. After this the user will be redirected to the home page.
+
+
 ```.py
 def register():
     print(request.method)
@@ -347,10 +357,121 @@ def profile():
     db.close()
     return render_template('profile.html',owned = owned, post_self = post_self)
 ```
+## Computational thinking
+### Algorithmic thinking
+I applied algorithmic thinking to create the register function. I aproached the whole process of input validations by creating a step by step function for each requirement.  
+```.py
+if len(user) > 0:
+            msg = 'username already used'
+            print(msg)
+        elif password_require(password) == 'invalid':
+            msg = 'password should be more than 7 characters including uppercase and number'
+            print(msg)
 
+        elif password != con_pass:
+            msg = 'password confirmation not matching'
+            print(msg)
+        else:
+            query = f'INSERT INTO users(username,password) values ("{username}","{hash(password)}")'
+            db.run_query(query)
+            db.close()
+            response = make_response(redirect('/home'))
+            print('success')
+            response.set_cookie('username',username)
+            return response
+```
+### Pattern recognition
+I applied pattern recognition to create a sidebar. Since I had a common code for the side bar in every htmlfile(besides login and register) I made a CSS code that could be applied to all of them.
+```.py
+.common .sidebar {
+  background-color: #f1f1f1;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 200px;
+  font-family: "Arial Black";
+
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin-bottom: 5px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.sidebar a:hover {
+    background-color: #ddd;
+}
+```
+### Abstracttion
+I applied abstraction by trying to use common variables. For example although there are two ways to identify the user from the database, which is the username and id. I chosed to use the username since it could be used in wider range and make the coding easy. Appling this knowledge allowed me to not use unneeded variables.
+
+### Decomposition
+I applied decomposition by tackling each success criteria individualy and putting it together afterwards. It made me easier to find the solution of error since individual functions makes it easier to identify the error happening.
+
+
+## Problem encountered
+The biggest problem I encountered through out this project is to manage the connection between HTML and CSS. To conquer this issue I tried to make groups of related elements in HTML so that it is easier to identify each part in CSS.
 
 # Criteria D: Functionality
 
 ## Demonstration Video
+
+# Critieria E: Evaluation
+
+## Evaluation table
+
+### Client (Record of this is in the appendix) 
+| Critieria | Met or not?        | Feedback       |
+|----------------------------|---------------------------------|----------------|
+|1. The user can upload their own review towards the game as a social media post. The post includes the title, publisher and content  |Met      |Met, no suggestions	|
+|2. There is a login and registration page for each user  | 	Met	| Met, no suggestions		| 
+|3. The user can view other social media post  | Met		| Better if you could add photos or videos of gameplay  | 
+|4. Users are able to store the games they own.  | Met		| It would be great if you could make a post from your own list| 
+|5. Users can search game reviews by title, post creator and publisher.  | Met		|no suggestions			| 
+|6. User can have their own profile page that displays their own posts and the game they own.  | Met			| Make the user owned list look better.	| 
+
+### Other user (Record of this is in the appendix) 
+|1. The user can upload their own review towards the game as a social media post. The post includes the title, publisher and content  |Met      |Met, no suggestions	|
+|2. There is a login and registration page for each user  | 	Met	| Met, no suggestions		| 
+|3. The user can view other social media post  | Met		| Better if you could see the other users profile.  | 
+|4. Users are able to store the games they own.  | Met		| Mabye make a wish list.| 
+|5. Users can search game reviews by title, post creator and publisher.  | Met		|no suggestions			| 
+|6. User can have their own profile page that displays their own posts and the game they own.  | Met			| no suggestion	| 
+
+This was after I showed this to an anonymous student here at my school to get their feedback on the project.
+
+## Suggestions for future development
+
+### Post from your own list
+The first suggestion was to make it able to create a post from your own list. This could be done by adding a function in the profile page which will redirect to the sharing screen with the selected information(such as title and publisher).
+
+### Images 
+
+The second suggestion was to make it able to share photos and videos in the post. This would be useful since users will be able to give more detail on what they are mentioning in the post. For example if the user is talking about a bug in the gamr they can actualy show the video of it.
+
+
+# Appendix
+## Client interview (planning and design) 
+
+## Client interview (Feedback) 
+
+## Video planning 
 
 
