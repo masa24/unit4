@@ -448,6 +448,9 @@ The biggest problem I encountered through out this project is to manage the conn
 |6. User can have their own profile page that displays their own posts and the game they own.  | Met			| Make the user owned list look better.	| 
 
 ### Other user (Record of this is in the appendix) 
+
+| Critieria | Met or not?        | Feedback       |
+|----------------------------|---------------------------------|----------------|
 |1. The user can upload their own review towards the game as a social media post. The post includes the title, publisher and content  |Met      |Met, no suggestions	|
 |2. There is a login and registration page for each user  | 	Met	| Met, no suggestions		| 
 |3. The user can view other social media post  | Met		| Better if you could see the other users profile.  | 
