@@ -4,7 +4,7 @@
 ## Criteria A: Planning
 
 ## Problem definition(Client identification)
-I am a student and a huge game enthusiast. I find it very challenging to determine whether the quality of a game is worth purchasing or not.
+My client(myself) is a student and a huge game enthusiast. I find it very challenging to determine whether the quality of a game is worth purchasing or not.
 
 When I want to purchase a new game, I often struggle to find reliable and informative reviews, since fans mostly make the sources and those could be biased.
 Sometimes it is very hard just to look for information on a specific game because it comes with many other unneeded information.
