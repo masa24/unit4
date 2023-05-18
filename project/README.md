@@ -432,6 +432,7 @@ The biggest problem I encountered through out this project is to manage the conn
 # Criteria D: Functionality
 
 ## Demonstration Video
+https://drive.google.com/drive/folders/1pg5xNzdxO-X2V1teS585dOvp-tb3qcZz?usp=share_link
 
 # Critieria E: Evaluation
 
@@ -458,7 +459,7 @@ The biggest problem I encountered through out this project is to manage the conn
 |5. Users can search game reviews by title, post creator and publisher.  | Met		|no suggestions			| 
 |6. User can have their own profile page that displays their own posts and the game they own.  | Met			| no suggestion	| 
 
-This was after I showed this to an anonymous student here at my school to get their feedback on the project.
+This was after I showed this to my online gaming friend.
 
 ## Suggestions for future development
 
