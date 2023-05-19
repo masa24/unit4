@@ -473,10 +473,12 @@ The second suggestion was to make it able to share photos and videos in the post
 
 
 # Appendix
+
 ## Client interview (planning and design) 
-
+![sp](sp.png)
+![sr](sr.png)
+*Client and the Developer agreeing to the success criteria*
 ## Client interview (Feedback) 
-
-## Video planning 
-
+![feedback](feedback.png)
+*Developer collecting feedback from client*
 
