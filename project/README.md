@@ -21,7 +21,20 @@ These issues can result in a poor gaming experience, such as missing opportuniti
 
 
 ## Proposed Solution
-To tackle the problem defined above, we propose to create a social media-style website that brings together a community of gamers to share their, reviews, and experiences with different games. The website will be built using Python as it is secure, open-source, and extensive, making it a better alternative to Javascript, which poses security risks. Flask will be used to host the website as it is highly scalable and provides great control over the code. To store the data, we will use SQLite as it excels at small to medium HTTP requests and can run independently after installation. The website's user interface will be created using Bootstrap5, which is compatible with modern browsers and provides cross-browser compatibility. This website will give gamers access to a reliable and comprehensive source of information. These can help us make informed decisions and enhance their overall gaming experience.
+To tackle the problem defined above, we propose to create a social media-style website that brings together a community of gamers to share their, reviews, and experiences with different games. The website will be built using Python as it is secure, open-source, and extensive, making it a better alternative to Javascript, which poses security risks.[^3] Flask will be used to host the website as it is highly scalable and provides great control over the code.[^4] To store the data, we will use SQLite as it excels at small to medium HTTP requests and can run independently after installation.[^5] The website's user interface will be created using HTML and CSS, which allows to create the structure and design in detail.[^6][^7] This website will give gamers access to a reliable and comprehensive source of information. These can help us make informed decisions and enhance their overall gaming experience.
+
+
+
+[^3]:Ijaz, Arslan. “JavaScript Vs. Python: Which One is Better? | by Arslan Ijaz | CodeX.” Medium, 20 September 2022, https://medium.com/codex/javascript-vs-python-which-one-is-better-b873f4e69583. Accessed 19 May 2023.
+
+[^4]:Shah, Hardik. “6 Reasons Why Flask is Better Framework for Web Application Development.” Able, 1 December 2021, https://able.bio/hardikshah/6-reasons-why-flask-is-better-framework-for-web-application-development--cd398f73. Accessed 19 May 2023.
+
+[^5]:SQL is 43 years old - here's 8 reasons we still use it today.” Blog, 28 April 2017, https://blog.sqlizer.io/posts/sql-43/. Accessed 19 May 2023.
+
+[^6]:Goyal, Yashi. “Advantages of HTML | Top 10 Amazing Advantages of HTML.” eduCBA, https://www.educba.com/advantages-of-html/. Accessed 19 May 2023.
+
+[^7]:“What Is CSS and Why Should You Use It?” Devmountain, https://devmountain.com/blog/what-is-css-and-why-use-it/. Accessed 19 May 2023.
+
 
 
 ## Success Criteria
