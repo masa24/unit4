@@ -45,6 +45,7 @@ To tackle the problem defined above, we propose to create a social media-style w
 ## UML Diagram
 ![uml](uml.png)
 ## Wireframe
+![wireframe](wireframe.png)
 
 ## Record of Tasks
 | Task No  | Planned Action  | Planned Outcome | Time estimate  | Target completion date  | Criterion |
